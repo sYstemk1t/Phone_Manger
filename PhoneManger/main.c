@@ -3,47 +3,47 @@
 #include <string.h>
 typedef struct Phone
 {
-	char name[1024];	//Ãû×Ö	
-	char Address[1024];	//×¡Ö·
-	char phone[1024];		//µç»°ºÅÂë
-	struct Phone *next;		//Ö¸ÏòÏÂÒ»¸ö½ÚµãÖ¸Õë
+	char name[1024];	//åå­—	
+	char Address[1024];	//ä½å€
+	char phone[1024];		//ç”µè¯å·ç 
+	struct Phone *next;		//æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹æŒ‡é’ˆ
 }Info_Phone;
 
 void faca()
 {
 
 	printf("****************************\n");
-	printf("1£ºÏÔÊ¾Í¨Ñ¶Â¼ÒÑÓĞĞÅÏ¢(ĞèÔÚÒÑÓĞĞÅÏ¢µÄÇé¿öÏÂÊ¹ÓÃ)¡£\n");
-	printf("2£ºÌí¼ÓÍ¨Ñ¶Â¼ÈËÔ±ĞÅÏ¢¡£\n");
-	printf("3£ºÉ¾³ıÍ¨Ñ¶Â¼ÈËÔ±ĞÅÏ¢¡£\n");
-	printf("4£ºĞŞ¸ÄÍ¨Ñ¶Â¼ÈËÔ±ĞÅÏ¢¡£\n");
-	printf("5£º²éÕÒÍ¨Ñ¶Â¼ÈËÔ±ĞÅÏ¢¡£\n");
-	printf("0£ºÍË³öÍ¨Ñ¶Â¼¡£\n");
+	printf("1ï¼šæ˜¾ç¤ºé€šè®¯å½•å·²æœ‰ä¿¡æ¯(éœ€åœ¨å·²æœ‰ä¿¡æ¯çš„æƒ…å†µä¸‹ä½¿ç”¨)ã€‚\n");
+	printf("2ï¼šæ·»åŠ é€šè®¯å½•äººå‘˜ä¿¡æ¯ã€‚\n");
+	printf("3ï¼šåˆ é™¤é€šè®¯å½•äººå‘˜ä¿¡æ¯ã€‚\n");
+	printf("4ï¼šä¿®æ”¹é€šè®¯å½•äººå‘˜ä¿¡æ¯ã€‚\n");
+	printf("5ï¼šæŸ¥æ‰¾é€šè®¯å½•äººå‘˜ä¿¡æ¯ã€‚\n");
+	printf("0ï¼šé€€å‡ºé€šè®¯å½•ã€‚\n");
 	printf("****************************\n");
-	
+
 };
 
-Info_Phone *print(Info_Phone *head)	//¹¦ÄÜÓĞÎÊÌâ£¬²»ÖªµÀÎªÊ²Ã´£¬Ö¸Õë³õÊ¼»¯ÎªNULL£¬µ«ÊÇÄÚ´æÖĞµÄÊı¾İÎªÍÍÍÍÍÍ
+Info_Phone *print(Info_Phone *head)	//åŠŸèƒ½æœ‰é—®é¢˜ï¼Œä¸çŸ¥é“ä¸ºä»€ä¹ˆï¼ŒæŒ‡é’ˆåˆå§‹åŒ–ä¸ºNULLï¼Œä½†æ˜¯å†…å­˜ä¸­çš„æ•°æ®ä¸ºå±¯å±¯å±¯
 {
-	/*´Ë¹¦ÄÜÓĞÎÊÌâ£¬³õÊ¼»¯»á³õÊ¼»¯ÎªÍÍÍÍÍÍ£¬Ê¹ÓÃÖ¸ÕëÖ¸ÏòµÄÊ±ºò£¬Ö¸ÕëÈÏÎªÍÍÍÍÍÍÒ²ÊÇÊı¾İ£¬ËùÒÔÊ¹ÓÃÕâ¸ö¹¦ÄÜÒ»¶¨»á±¼À£*/
-	//ÎÊÌâÒÑ½â¾ö£¬Ê¹ÓÃmemsetº¯Êı½«ÄÚ´æÖĞµÄÊı¾İÈ«²¿³õÊ¼»¯Îª0
-	Info_Phone *p;	//½á¹¹ÌåÖ¸Õë
+	/*æ­¤åŠŸèƒ½æœ‰é—®é¢˜ï¼Œåˆå§‹åŒ–ä¼šåˆå§‹åŒ–ä¸ºå±¯å±¯å±¯ï¼Œä½¿ç”¨æŒ‡é’ˆæŒ‡å‘çš„æ—¶å€™ï¼ŒæŒ‡é’ˆè®¤ä¸ºå±¯å±¯å±¯ä¹Ÿæ˜¯æ•°æ®ï¼Œæ‰€ä»¥ä½¿ç”¨è¿™ä¸ªåŠŸèƒ½ä¸€å®šä¼šå¥”æºƒ*/
+	//é—®é¢˜å·²è§£å†³ï¼Œä½¿ç”¨memsetå‡½æ•°å°†å†…å­˜ä¸­çš„æ•°æ®å…¨éƒ¨åˆå§‹åŒ–ä¸º0
+	Info_Phone *p;	//ç»“æ„ä½“æŒ‡é’ˆ
 	p = head;
-	
-	if (head != NULL)	//ÅĞ¶Ïµ±Ç°½×¶ÎÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿Õ£¬Ôò²»½øÈëÑ­»·
+
+	if (head != NULL)	//åˆ¤æ–­å½“å‰é˜¶æ®µæ˜¯å¦ä¸ºç©ºï¼Œå¦‚æœä¸ºç©ºï¼Œåˆ™ä¸è¿›å…¥å¾ªç¯
 	{
-		printf("µ±Ç°Í¨Ñ¶Â¼£º");
+		printf("å½“å‰é€šè®¯å½•ï¼š");
 		while (p != NULL)
 		{
-			printf("ĞÕÃû:%s\r\n", p->name);
-			printf("×¡Ö·:%s\r\n", p->Address);
-			printf("µç»°ºÅÂë:%s\r\n", p->phone);
-			p = p->next;	//Ö¸ÏòÏÂÒ»¸ö½Úµã
+			printf("å§“å:%s\r\n", p->name);
+			printf("ä½å€:%s\r\n", p->Address);
+			printf("ç”µè¯å·ç :%s\r\n", p->phone);
+			p = p->next;	//æŒ‡å‘ä¸‹ä¸€ä¸ªèŠ‚ç‚¹
 		}
 	}
 	else
 	{
-		printf("µ±Ç°Îª¿Õ");
+		printf("å½“å‰ä¸ºç©º");
 	}
 
 	return head;
@@ -59,28 +59,28 @@ Info_Phone *Phone_Add(Info_Phone *head)
 
 	p0 = (Info_Phone *)malloc(sizeof(Info_Phone));
 	int Input = 0;
-	printf("ÄúÊÇ·ñĞèÒªÌí¼ÓÓÃ»§,1ÎªÌí¼Ó£¬2Îª²»Ìí¼Ó");
+	printf("æ‚¨æ˜¯å¦éœ€è¦æ·»åŠ ç”¨æˆ·,1ä¸ºæ·»åŠ ï¼Œ2ä¸ºä¸æ·»åŠ ");
 	scanf("%d", &Input);
 	switch (Input)
 	{
 	case 1:
-		printf("ÇëÊäÈëÄúÒªÌí¼ÓµÄÃû³Æ:");
+		printf("è¯·è¾“å…¥æ‚¨è¦æ·»åŠ çš„åç§°:");
 		scanf("%s", p0->name);
-		getchar();	//ÕâÀï³ÔÒ»¸ö»Ø³µ£¬±¾À´ÊÇÏë³Ô¿Õ¸ñ£¬µ«ÊÇÍüÁËÔõÃ´Ğ´
-		printf("ÇëÊäÈë¼ÒÍ¥×¡Ö·:");
+		getchar();	//è¿™é‡Œåƒä¸€ä¸ªå›è½¦ï¼Œæœ¬æ¥æ˜¯æƒ³åƒç©ºæ ¼ï¼Œä½†æ˜¯å¿˜äº†æ€ä¹ˆå†™
+		printf("è¯·è¾“å…¥å®¶åº­ä½å€:");
 		scanf("%s", p0->Address);
 		getchar();
-		printf("ÇëÊäÈëµç»°Ò»°ãÎª11Î»:");
+		printf("è¯·è¾“å…¥ç”µè¯ä¸€èˆ¬ä¸º11ä½:");
 		scanf("%s", p0->phone);
 
 		if (head == NULL)
 		{
 			head = p0;
-			p0->next = NULL;	//°Ñ½ÚµãĞÅÏ¢Çå¿Õ£¬ºÜ¿Ó£¬µ±Ê±ÍüÁËÕâ¸ö£¬ºóÀ´²¹µÄ
+			p0->next = NULL;	//æŠŠèŠ‚ç‚¹ä¿¡æ¯æ¸…ç©ºï¼Œå¾ˆå‘ï¼Œå½“æ—¶å¿˜äº†è¿™ä¸ªï¼Œåæ¥è¡¥çš„
 		}
 		else
 		{
-			while ((strcmp(p0->name, p1->name)>0) && (p1->next != NULL))	//¶Ôp1ºÍp2½øĞĞ±È½Ï£¬ÈçºÎ½á¹û´óÓÚ0»òÕßp1µÄÏÂÒ»¸ö½Úµã²»Îª¿Õ
+			while ((strcmp(p0->name, p1->name)>0) && (p1->next != NULL))	//å¯¹p1å’Œp2è¿›è¡Œæ¯”è¾ƒï¼Œå¦‚ä½•ç»“æœå¤§äº0æˆ–è€…p1çš„ä¸‹ä¸€ä¸ªèŠ‚ç‚¹ä¸ä¸ºç©º
 			{
 				p2 = p1;
 				p1 = p1->next;
@@ -103,9 +103,9 @@ Info_Phone *Phone_Add(Info_Phone *head)
 				p1->next = p0;
 				p0->next = NULL;
 			}
-			printf("Ìí¼Ó³É¹¦");
+			printf("æ·»åŠ æˆåŠŸ");
 		}
-		
+
 	}
 	return(head);
 }
@@ -118,14 +118,14 @@ Info_Phone *Phone_Delete(Info_Phone *head)
 	p1 = head;
 	p2 = head;
 
-	printf("ÇëÊäÈëÒªÉ¾³ıµÄÃû×Ö");
+	printf("è¯·è¾“å…¥è¦åˆ é™¤çš„åå­—");
 	scanf("%s", name);
 
-	if (head != NULL)	//ÅĞ¶Ïµ±Ç°´«ÈëµÄ½á¹¹ÌåÓĞÃ»ÓĞÊı¾İ
+	if (head != NULL)	//åˆ¤æ–­å½“å‰ä¼ å…¥çš„ç»“æ„ä½“æœ‰æ²¡æœ‰æ•°æ®
 	{
-		while (p1 != NULL)	//ÕÒ½áÎ²
+		while (p1 != NULL)	//æ‰¾ç»“å°¾
 		{
-			if (strcmp(p1->name, name) == 0)	//strcmpÈç¹ûÁ½¸öÖµÏàµÈ£¬·µ»ØÖµÎª0
+			if (strcmp(p1->name, name) == 0)	//strcmpå¦‚æœä¸¤ä¸ªå€¼ç›¸ç­‰ï¼Œè¿”å›å€¼ä¸º0
 			{
 				if (head != p1)
 				{
@@ -136,7 +136,7 @@ Info_Phone *Phone_Delete(Info_Phone *head)
 					head = p1->next;
 				}
 				free(p1);
-				printf("É¾³ı³É¹¦");
+				printf("åˆ é™¤æˆåŠŸ");
 				return head;
 			}
 			else
@@ -144,13 +144,13 @@ Info_Phone *Phone_Delete(Info_Phone *head)
 				p2 = p1;
 				p2->next = p1;
 			}
-			printf("ÕÒ²»µ½Õâ¸öÈË\r\n");
+			printf("æ‰¾ä¸åˆ°è¿™ä¸ªäºº\r\n");
 			return head;
 		}
 	}
 	else
 	{
-		printf("Í¨Ñ¶Â¼ÊÇ¿ÕµÄ");
+		printf("é€šè®¯å½•æ˜¯ç©ºçš„");
 		return head;
 	}
 }
@@ -162,7 +162,7 @@ Info_Phone *Phone_Revise(Info_Phone *head)
 	p1 = head;
 	p2 = head;
 
-	printf("ÇëÊäÈëÒªĞŞ¸ÄÈËÃûµÄÃû³Æ");
+	printf("è¯·è¾“å…¥è¦ä¿®æ”¹äººåçš„åç§°");
 
 	scanf("%s", name);
 	if (head != NULL)
@@ -171,13 +171,13 @@ Info_Phone *Phone_Revise(Info_Phone *head)
 		{
 			if (strcmp(p1->name, name) == 0)
 			{
-				printf("ÇëÊäÈëĞŞ¸ÄºóµÄÃû×Ö:");
+				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„åå­—:");
 				scanf("%s", p1->name);
-				printf("ÇëÊäÈëĞŞ¸ÄºóµÄµØÖ·:");
+				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„åœ°å€:");
 				scanf("%s", p1->Address);
-				printf("ÇëÊäÈëĞŞ¸ÄºóµÄµç»°ºÅÂë:");
+				printf("è¯·è¾“å…¥ä¿®æ”¹åçš„ç”µè¯å·ç :");
 				scanf("%s", p1->phone);
-				printf("ĞŞ¸Ä³É¹¦");
+				printf("ä¿®æ”¹æˆåŠŸ");
 				return head;
 			}
 
@@ -187,12 +187,12 @@ Info_Phone *Phone_Revise(Info_Phone *head)
 				p2->next = p1;
 			}
 		}
-		printf("ÕÒ²»µ½´ËÁªÏµÈË");
+		printf("æ‰¾ä¸åˆ°æ­¤è”ç³»äºº");
 		return head;
 	}
 	else
 	{
-		printf("µ±Ç°Í¨Ñ¶Â¼ÊÇ¿ÕµÄ");
+		printf("å½“å‰é€šè®¯å½•æ˜¯ç©ºçš„");
 		return head;
 	}
 }
@@ -204,7 +204,7 @@ Info_Phone *Phone_Search(Info_Phone *head)
 	char name[1024];
 	p1 = head;
 	p2 = head;
-	printf("ÇëÊäÈëÒª²éÑ¯µÄÃû×Ö");
+	printf("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„åå­—");
 	scanf("%s", name);
 	if (head != NULL)
 	{
@@ -212,13 +212,13 @@ Info_Phone *Phone_Search(Info_Phone *head)
 		{
 			if (strcmp(p1->name, name) == 0)
 			{
-				printf("µ±Ç°ÓÃ»§µÄÃû×ÖÎª:");
+				printf("å½“å‰ç”¨æˆ·çš„åå­—ä¸º:");
 				printf("%s", p1->name);
-				printf("µ±Ç°ÓÃ»§µÄµØÖ·Îª:");
+				printf("å½“å‰ç”¨æˆ·çš„åœ°å€ä¸º:");
 				printf("%s", p1->Address);
-				printf("µ±Ç°ÓÃ»§µÄµç»°Îª:");
+				printf("å½“å‰ç”¨æˆ·çš„ç”µè¯ä¸º:");
 				printf("%s", p1->phone);
-				printf("Êä³öÍê±Ï\r\n");
+				printf("è¾“å‡ºå®Œæ¯•\r\n");
 				return head;
 			}
 
@@ -228,11 +228,11 @@ Info_Phone *Phone_Search(Info_Phone *head)
 				p2->next = p1;
 			}
 		}
-		printf("ÕÒ²»µ½´ËÁªÏµÈË");
+		printf("æ‰¾ä¸åˆ°æ­¤è”ç³»äºº");
 	}
 	else
 	{
-		printf("µ±Ç°Í¨Ñ¶Â¼ÊÇ¿ÕµÄ");
+		printf("å½“å‰é€šè®¯å½•æ˜¯ç©ºçš„");
 	}
 }
 
@@ -241,13 +241,13 @@ int main()
 	int input = 0;
 	Info_Phone *head = NULL;
 	head = (Info_Phone *)malloc(sizeof(Info_Phone));
-	memset(head, 0, sizeof(Info_Phone));
+	//memset(head, 0, sizeof(Info_Phone));
 	while (1)
 	{
-		printf("ÇëÊäÈëÄãµÄÑ¡Ôñ\r\n");
+		printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©\r\n");
 		faca();
 		scanf("%d", &input);
-		
+
 		if (input <= 5)
 		{
 			switch (input)
@@ -255,7 +255,7 @@ int main()
 			case 1:
 				head = print(head);
 				break;
-				
+
 			case 2:
 				head = Phone_Add(head);
 				break;
@@ -276,9 +276,9 @@ int main()
 		}
 		else
 		{
-			printf("ÊäÈë´íÎó");
+			printf("è¾“å…¥é”™è¯¯");
 		}
-		
+
 	}
 	system("pause");
 }
